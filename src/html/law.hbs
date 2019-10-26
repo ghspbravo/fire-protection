@@ -1,0 +1,123 @@
+{{> header title=htmlWebpackPlugin.options.title}}
+
+<!-- Banner -->
+<section id="accordionExample"
+  class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+  <div class="content-full">
+
+    <ul class="actions-list">
+
+      <h3>
+        <a class="actions-item collapsed" data-toggle="collapse" data-target="#rules" role="button"
+          aria-expanded="false" aria-controls="rules">
+          <i class="actions-item__icon icon_collapsed fas fa-plus"></i>
+          <i class="actions-item__icon fas fa-minus"></i>
+          <span>Своды правил</span>
+        </a>
+      </h3>
+
+      <h3>
+        <a class="actions-item collapsed" data-toggle="collapse" data-target="#laws" role="button"
+          aria-expanded="false" aria-controls="laws">
+          <i class="actions-item__icon icon_collapsed fas fa-plus"></i>
+          <i class="actions-item__icon fas fa-minus"></i>
+          <span>Законы</span>
+        </a>
+      </h3>
+
+      <h3>
+        <a class="actions-item collapsed" data-toggle="collapse" data-target="#liter" role="button"
+          aria-expanded="false" aria-controls="liter">
+          <i class="actions-item__icon icon_collapsed fas fa-plus"></i>
+          <i class="actions-item__icon fas fa-minus"></i>
+          <span>Нормативная литература</span>
+        </a>
+      </h3>
+
+    </ul>
+
+    <ul class="actions-table-mobile">
+
+      <a class="small actions-item collapsed" data-toggle="collapse" data-target="#m-rules" role="button"
+        aria-expanded="false" aria-controls="m-rules">
+        <i class="actions-item__icon icon_collapsed fas fa-plus"></i>
+        <i class="actions-item__icon fas fa-minus"></i>
+        <h4 class="text-left">Своды правил</h4>
+      </a>
+
+      <div id="m-rules" class="collapse actions-item-elem" aria-labelledby="m-rules" data-parent="#accordionExample">
+        {{#each htmlWebpackPlugin.options.rules}}
+        <div class="list">
+          <i class="fas fa-external-link-alt"></i> <a class="no-underline" href="{{link}}" target="_blank">{{name}}</a>
+        </div>
+        {{/each}}
+      </div>
+
+      <a class="small actions-item collapsed" data-toggle="collapse" data-target="#m-laws" role="button"
+        aria-expanded="false" aria-controls="m-laws">
+        <i class="actions-item__icon icon_collapsed fas fa-plus"></i>
+        <i class="actions-item__icon fas fa-minus"></i>
+        <h4 class="text-left">Законы</h4>
+      </a>
+
+      <div id="m-laws" class="collapse actions-item-elem" aria-labelledby="m-laws" data-parent="#accordionExample">
+        {{#each htmlWebpackPlugin.options.laws}}
+        <div class="list">
+          <i class="fas fa-external-link-alt"></i> <a class="no-underline" href="{{link}}" target="_blank">{{name}}</a>
+        </div>
+        {{/each}}
+      </div>
+
+      <a class="small actions-item collapsed" data-toggle="collapse" data-target="#m-liter" role="button"
+        aria-expanded="false" aria-controls="m-liter">
+        <i class="actions-item__icon icon_collapsed fas fa-plus"></i>
+        <i class="actions-item__icon fas fa-minus"></i>
+        <h4 class="text-left">Нормативная литература</h4>
+      </a>
+
+      <div id="m-liter" class="collapse actions-item-elem" aria-labelledby="m-liter" data-parent="#accordionExample">
+        {{#each htmlWebpackPlugin.options.liter}}
+        <div class="list">
+          <i class="fas fa-external-link-alt"></i> <a class="no-underline" href="{{link}}" target="_blank">{{name}}</a>
+        </div>
+        {{/each}}
+      </div>
+
+    </ul>
+  </div>
+
+  <div class="image">
+    <div class="content content-full content-center">
+      <div class="inner">
+        <h1 class="always-collapse">Нормативы</h1>
+
+        <div id="rules" class="collapse" aria-labelledby="rules" data-parent="#accordionExample">
+          {{#each htmlWebpackPlugin.options.rules}}
+          <div class="list">
+            <i class="fas fa-external-link-alt"></i> <a class="no-underline" href="{{link}}" target="_blank">{{name}}</a>
+          </div>
+          {{/each}}
+        </div>
+
+        <div id="laws" class="collapse" aria-labelledby="laws" data-parent="#accordionExample">
+          {{#each htmlWebpackPlugin.options.laws}}
+          <div class="list">
+            <i class="fas fa-external-link-alt"></i> <a class="no-underline" href="{{link}}" target="_blank">{{name}}</a>
+          </div>
+          {{/each}}
+        </div>
+
+        <div id="liter" class="collapse" aria-labelledby="liter" data-parent="#accordionExample">
+          {{#each htmlWebpackPlugin.options.liter}}
+          <div class="list">
+            <i class="fas fa-external-link-alt"></i> <a class="no-underline" href="{{link}}" target="_blank">{{name}}</a>
+          </div>
+          {{/each}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{{> footer}}

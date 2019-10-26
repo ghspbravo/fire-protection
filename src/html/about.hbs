@@ -1,0 +1,39 @@
+{{> header title=htmlWebpackPlugin.options.title}}
+
+<!-- Banner -->
+<section
+  class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+  <div class="content">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem esse error facere veniam, in maiores sapiente
+      quod voluptatibus optio nobis nemo repellendus, reiciendis accusamus ad quasi. Fugiat saepe atque corporis?</p>
+    <ul class="actions stacked">
+      <li><a href="#docs" class="button large wide smooth-scroll-middle">Наши документы</a></li>
+    </ul>
+  </div>
+
+  <div class="image">
+    <div class="content content-full content-center">
+      <div class="inner">
+        <h1>О компании</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Items -->
+<section id="docs" class="wrapper style1 align-center">
+  <div class="inner">
+    <h2>ДОКУМЕНТЫ</h2>
+    <p>Здесь вы можете посмотреть сканы всех нужных документов о нас</p>
+    <div class="items style1 small onscroll-fade-in">
+      {{#each htmlWebpackPlugin.options.docs}}
+      <section class="items-center content-center">
+        <h3><a href="{{link}}" target="_blank">{{title}}</a></h3>
+      </section>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+
+{{> footer}}

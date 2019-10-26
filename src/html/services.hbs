@@ -1,0 +1,55 @@
+{{> header title=htmlWebpackPlugin.options.title}}
+
+<!-- Banner -->
+<section id="accordionExample"
+  class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+  <div class="content-full">
+
+    <ul class="actions-table">
+      {{#each htmlWebpackPlugin.options.services}}
+      <a class="small actions-item collapsed" data-toggle="collapse" data-target="#service-{{id}}" role="button"
+        aria-expanded="false" aria-controls="service-{{id}}">
+        <i class="actions-item__icon icon_collapsed fas fa-plus"></i>
+        <i class="actions-item__icon fas fa-minus"></i>
+        <span>{{name}}</span>
+      </a>
+      {{/each}}
+    </ul>
+
+    <ul class="actions-table-mobile">
+      {{#each htmlWebpackPlugin.options.services}}
+      <a class="small actions-item collapsed" data-toggle="collapse" data-target="#m-service-{{id}}" role="button"
+        aria-expanded="false" aria-controls="m-service-{{id}}">
+        <i class="actions-item__icon icon_collapsed fas fa-plus"></i>
+        <i class="actions-item__icon fas fa-minus"></i>
+        <h4 class="text-left">{{name}}</h4>
+      </a>
+
+      <div id="m-service-{{id}}" class="collapse actions-item-elem" aria-labelledby="m-service-{{id}}" data-parent="#accordionExample">
+        {{#each description }}
+        <p>{{text}}</p>
+        {{/each}}
+      </div>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="image">
+    <div class="content content-full content-center">
+      <div class="inner">
+        <h1 class="always-collapse">Наши услуги</h1>
+        {{#each htmlWebpackPlugin.options.services}}
+        <div id="service-{{id}}" class="collapse" aria-labelledby="service-{{id}}" data-parent="#accordionExample">
+          <h2>{{name}}</h2>
+
+          {{#each description }}
+          <p>{{text}}</p>
+          {{/each}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{> footer}}

@@ -1,0 +1,59 @@
+{{> header title=htmlWebpackPlugin.options.title}}
+
+<!-- Banner -->
+<section
+  class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+  <div class="content">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem esse error facere veniam, in maiores sapiente
+      quod voluptatibus optio nobis nemo repellendus, reiciendis accusamus ad quasi. Fugiat saepe atque corporis?</p>
+    <ul class="actions stacked">
+      <li><a href="#price" class="button large wide smooth-scroll-middle">Наши расценки</a></li>
+    </ul>
+  </div>
+
+  <div class="image">
+    <div class="content content-full content-center">
+      <div class="inner">
+        <h1>Стоимость</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="price" class="wrapper style1">
+  <div class="inner">
+    <!-- Table -->
+    <section>
+      <header class="align-center mb-5">
+        <h2>РАСЦЕНКИ</h2>
+      </header>
+      <div class="content">
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Название</th>
+                <th>Описание</th>
+                <th>Цена</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each htmlWebpackPlugin.options.price}}
+              <tr>
+                <td>{{name}}</td>
+                <td>{{description}}</td>
+                <td>{{price}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</section>
+
+
+{{> footer}}

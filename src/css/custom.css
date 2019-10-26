@@ -1,0 +1,175 @@
+.mx-auto {
+  margin: 0 auto;
+}
+
+.services-form {
+  max-width: 800px;
+}
+
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+
+  z-index: 99;
+}
+
+.logo img {
+  width: 60px;
+}
+
+@media screen and (max-width: 480px) {
+
+  .logo {
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .logo img {
+    width: 45px;
+  }
+
+}
+
+.banner .image {
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+}
+
+.banner.style1 .content-full {
+  height: 100%;
+  width: 100%;
+  padding: 5em 2em;
+}
+
+.items.style1.small>* {
+  padding: 2.1875rem 2.1875rem 2.1875rem 2.1875rem;
+}
+
+.content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mb-5 {
+  margin-bottom: 5em;
+}
+
+
+.actions-table {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 20px 5px;
+  list-style: none;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.actions-item {
+  display: flex;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.actions-item:not(.collapsed) {
+  background-color: black;
+  color: white;
+}
+
+.actions-item__icon {
+  padding-top: 5px;
+  padding-right: 15px;
+}
+
+.icon_collapsed {
+  display: none;
+}
+
+.collapsed .icon_collapsed {
+  display: block;
+}
+
+.collapsed .actions-item__icon:not(.icon_collapsed) {
+  display: none;
+}
+
+.collapse {
+  display: none;
+}
+
+.collapsing {
+  position: absolute;
+  opacity: 0;
+}
+
+.banner .image .collapse {
+  background-color: black;
+  position: relative;
+  z-index: 5;
+  padding: 1em 2em;
+}
+
+.collapse.show {
+  display: block;
+}
+
+.always-collapse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.actions-item-elem {
+  padding: 10px;
+  text-align: left;
+}
+
+.collapse.show.actions-item-elem {
+  background-color: black;
+  color: white;
+}
+
+.actions-table-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .actions-table,
+  .actions-list {
+    display: none;
+  }
+
+  .actions-table-mobile {
+    display: block;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list > * {
+  margin-top: 20px;
+}
