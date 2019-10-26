@@ -15,7 +15,11 @@
 }
 
 .logo img {
-  width: 60px;
+  width: 180px;
+}
+
+.logo_black {
+  display: none;
 }
 
 @media screen and (max-width: 480px) {
@@ -26,8 +30,16 @@
     transform: translateX(-50%);
   }
 
+  .logo_black {
+    display: block;
+  }
+
+  .logo_white {
+    display: none;
+  }
+
   .logo img {
-    width: 45px;
+    width: 150px;
   }
 
 }
