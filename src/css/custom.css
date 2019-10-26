@@ -86,6 +86,7 @@ h6 {
   display: flex;
   text-decoration: none;
   padding: 10px;
+  cursor: pointer;
 }
 
 .actions-item:not(.collapsed) {
@@ -121,8 +122,13 @@ h6 {
 
 .banner .image .collapse {
   background-color: black;
-  position: relative;
+  position: absolute;
   z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
   padding: 1em 2em;
 }
 
