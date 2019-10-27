@@ -12,10 +12,13 @@
   left: 20px;
 
   z-index: 99;
+
+  box-shadow: none !important;
 }
 
-.logo img {
-  width: 180px;
+.logo object {
+  width: 200px;
+  pointer-events: none;
 }
 
 .logo_black {
@@ -38,8 +41,8 @@
     display: none;
   }
 
-  .logo img {
-    width: 150px;
+  .logo object {
+    width: 180px;
   }
 
 }
