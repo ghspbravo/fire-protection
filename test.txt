@@ -1,1 +1,3 @@
 Here we gonna test git history magic
+
+Commit 2
